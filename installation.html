@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>WallScript - Social networking script - Installation Documentation</title>
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;WallScript - Social networking script&rdquo;</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;WallScript - Social networking script&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Email: <a href="mailto:gpandi05@gmail.com">gpandi05@gmail.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->	
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#requirement">Requirements</a></li>
+			<li><a href="#installation">Installation</a></li>
+		</ol>
+		
+		<hr>
+
+		<h3 id="requirement"><strong>A) Requirements</strong> - <a href="#toc">top</a></h3>
+
+		<ul>
+			<li><span style="font-size: 14px;">&#65279;PHP &gt;=5.5.9<br></span></li><li><span style="font-size: 14px;">Laravel 5.2.*</span></li><li><span style="font-size: 14px;">OpenSSL PHP Extension</span></li><li><span style="font-size: 14px;">PDO PHP Extension</span></li><li><span style="font-size: 14px;">Mbstring PHP Extension</span></li><li><span style="font-size: 14px;">Tokenizer PHP Extension</span></li><li><span style="font-size: 14px;">XML PHP Extension</span></li><li><span style="font-size: 14px;">MySQL 5.5</span></li><li><span style="font-size: 14px;">Composer 1.4.1</span></li>
+		</ul>
+
+		<hr>
+
+		<h3 id="installation"><strong>B) Installation</strong> - <a href="#toc">top</a></h3>
+
+<p><span style="font-size: 14px;">Script based on Laravel framework so it utilizes Composer to manage its dependencies. So, before goto the installation, make sure you have Composer installed on your machine.</span></p>
+<p><span style="font-size: 14px;">Ref: &nbsp;https://getcomposer.org/doc/00-intro.md</span></p>
+<p><span style="font-size: 18px;"><b>Steps:</b></span></p>
+<p><span style="font-size: 14px;"><b>Step 1: </b></span></p>
+<p style="margin-left: 25px;"><span style="font-size: 14px;">Extract source files and put it to root directory then do the composer installation by following commands</span></p>
+<pre style="margin-left: 25px;"><span style="font-size: 14px;">composer install</span></pre>
+<p><span style="font-size: 14px;"><b>Step 2:</b> </span></p>
+<p style="margin-left: 25px;"><span style="font-size: 14px;">Following directories require 777 permission</span></p>
+<pre style="margin-left: 25px;"><span style="font-size: 14px;">storage/<br></span><span style="font-size: 14px;">bootstrap/cache/<br></span><span style="font-size: 14px;">public/uploads/</span><br>
+<br class="Apple-interchange-newline"></pre>
+<p><span style="font-size: 14px;"><b>Step 3:</b></span></p>
+<p style="margin-left: 25px;"><span style="font-size: 14px;">Create database on mysql ex: socialwall</span></p>
+<p><span style="font-size: 14px;"><b>Step 4: </b></span></p>
+<p style="margin-left: 25px;"><span style="font-size: 14px;">Also you can see configuration files in root directory by environment wise</span></p>
+<p style="margin-left: 25px;"><span style="font-size: 14px;"><b><i>.env.development </i></b>– For local development purpose</span></p>
+<p style="margin-left: 25px;"><span style="font-size: 14px;"><b><i>.env.production</i></b> – For production environment configuration</span></p>
+<p style="margin-left: 25px;"><span style="font-size: 14px;"><b><i>.env.testing</i></b> – For testing environment configuration</span></p>
+<p style="margin-left: 25px;"><span style="font-size: 14px;">Note: rename above configuration to .env based on environment basis</span></p>
+<p><span style="font-size: 14px;"><b>Step 5: </b></span></p>
+<p style="margin-left: 25px;"><span style="font-size: 14px;">Application Configuration Details</span></p>
+<p style="margin-left: 25px;"><span style="font-size: 14px;">Setting Environment of the application&nbsp;</span></p>
+<pre style="margin-left: 25px;"><span style="font-size: 14px;">APP_ENV=local or production or testing</span></pre>
+<p style="margin-left: 25px;"><span style="font-size: 14px;">Encryption key used for encryption&nbsp;</span></p>
+<pre style="margin-left: 25px;"><span style="font-size: 14px;">APP_KEY=base64:25ZKWxgEyKDX1HQ2Jdqyk+GECcz0U0Tlx89M0H7SN8I=</span></pre>
+<p style="margin-left: 25px;"><span style="font-size: 14px;">Application URL&nbsp;</span></p>
+<pre style="margin-left: 25px;"><span style="font-size: 14px;">APP_URL= http://localhost</span></pre>
+<p style="margin-left: 25px;"><span style="font-size: 14px;">Application Timezone&nbsp;</span></p>
+<pre style="margin-left: 25px;"><span style="font-size: 14px;">APP_TIMEZONE=Asia/Kolkata</span></pre>
+<p><span style="font-size: 14px;"><b>Step 6: </b></span></p>
+<p style="margin-left: 25px;"><span style="font-size: 14px;">Database Configuration Details&nbsp;</span><br></p>
+<p style="margin-left: 25px;"><span style="font-size: 14px;">Note: Right now we are supporting only MySQL</span></p>
+<pre style="margin-left: 25px;"><span style="font-size: 14px;">DB_CONNECTION=mysql<br></span><span style="font-size: 14px;">DB_HOST=127.0.0.1<br></span><span style="font-size: 14px;">DB_PORT=3306<br></span><span style="font-size: 14px;">DB_DATABASE=socialwall<br></span><span style="font-size: 14px;">DB_USERNAME=root<br></span><span style="font-size: 14px;">DB_PASSWORD=mysql<br></span><span style="font-size: 14px;">DB_TIMEZONE=+05:30</span></pre>
+<p><span style="font-size: 14px;"><b>Step 7: </b></span></p>
+<p style="margin-left: 25px;"><span style="font-size: 14px;">Cache/Session/Queue Driver settings</span></p>
+<pre style="margin-left: 25px;"><span style="font-size: 14px;">CACHE_DRIVER=memcached &nbsp; (Supported: "file", "database", "apc", "memcached", "redis", "array")<br></span><span style="font-size: 14px;">SESSION_DRIVER=memcached &nbsp; (Supported: "file", "cookie", "database", "apc", "memcached", "redis", "array")<br></span><span style="font-size: 14px;">QUEUE_DRIVER=sync &nbsp; (Supported: "sync", "database", "beanstalkd", "sqs", "redis")</span></pre>
+<p><span style="font-size: 14px;"><b>Step 8: </b></span></p>
+<p style="margin-left: 25px;"><span style="font-size: 14px;">If you using redis driver then you must specify the configuration like below</span></p>
+<pre style="margin-left: 25px;"><span style="font-size: 14px;">REDIS_HOST=127.0.0.1<br></span><span style="font-size: 14px;">REDIS_PASSWORD=null<br></span><span style="font-size: 14px;">REDIS_PORT=6379</span></pre>
+<p><span style="font-size: 14px;"><b>Step 9: </b></span></p>
+<p style="margin-left: 25px;"><span style="font-size: 14px;">Mail Configuration to sending emails</span></p>
+<pre style="margin-left: 25px;"><span style="font-size: 14px;">MAIL_DRIVER=smtp &nbsp; (Supported: "smtp", "mail", "sendmail", "mailgun", "mandrill", "ses", "sparkpost", "log")<br></span><span style="font-size: 14px;">MAIL_HOST=Mailhost<br></span><span style="font-size: 14px;">MAIL_PORT=Port<br></span><span style="font-size: 14px;">MAIL_USERNAME=Username<br></span><span style="font-size: 14px;">MAIL_PASSWORD=Password<br></span><span style="font-size: 14px;">MAIL_ENCRYPTION=tls //Encryption<br></span><span style="font-size: 14px;">MAIL_FROM_ADDRESS=FromEmailAddress</span></pre>
+<p><span style="font-size: 14px;"><b>Step 10: </b></span></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size: 14px;">Then need to import Database Table Schema from sql file and file has been located to db/socialwall_v1.0.sql</span></p>
+<p><span style="font-size: 14px;"><b>Step 11:</b></span></p>
+<p style="margin-left: 25px;"><span style="font-size: 14px;"> Once done, Then we need to configure application with web server.&nbsp;</span><span style="font-size: 14px;">Apache Virtual Host Configuration</span></p>
+<p style="margin-left: 25px;"><span style="font-size: 14px;">Note: Apache mod_rewrite is required</span></p>
+<p style="margin-left: 25px;"><span style="font-size: 14px;">Install Laravel framework windows xampp&nbsp;</span></p>
+<p style="margin-left: 25px;"><span style="font-size: 14px;"><b><i>https://www.codementor.io/magarrent/how-to-install-laravel-5-xampp-windows-du107u9ji Install Laravel framework Ubuntu&nbsp;</i></b></span></p>
+<p style="margin-left: 25px;"><span style="font-size: 14px;"><b><i>https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-16-04</i></b></span></p>
+<p style="margin-left: 25px;"><span style="font-size: 14px;"><b><i>Nginx Configuration</i></b></span></p>
+<p style="margin-left: 25px;"><span style="font-size: 14px;">Edit site config file /etc/nginx/sites-available/default and update the following configuration</span></p>
+<pre style="margin-left: 25px;"><span style="font-size: 14px;">server {&nbsp;<br></span><span style="font-size: 14px;">&nbsp; listen 80 default_server;&nbsp;<br></span><span style="font-size: 14px;">&nbsp; listen [::]:80 default_server ipv6only=on;&nbsp;<br></span><span style="font-size: 14px;">&nbsp; root source_path; (ex: /usr/share/nginx/html/socialwall/public/)&nbsp;<br></span><span style="font-size: 14px;">&nbsp; index index.php index.html index.htm;&nbsp;<br></span><span style="font-size: 14px;">&nbsp; server_name server_domain_or_IP;&nbsp;<br></span><span style="font-size: 14px;">&nbsp; location / {<span class="Apple-tab-span" style="white-space:pre">    </span>&nbsp;<br></span><span style="font-size: 14px;">&nbsp; &nbsp; try_files $uri $uri/ /index.php?$query_string;&nbsp;<br></span><span style="font-size: 14px;">&nbsp; }</span><span style="font-size: 14px;"><br></span><span style="font-size: 14px;">&nbsp; location ~ \.php$ {<br></span><span style="font-size: 14px;">&nbsp; &nbsp; try_files $uri /index.php =404; &nbsp;<br></span><span style="font-size: 14px;">&nbsp; &nbsp; fastcgi_split_path_info ^(.+\.php)(/.+)$; &nbsp;<br></span><span style="font-size: 14px;">&nbsp; &nbsp; fastcgi_pass unix:/var/run/php5-fpm.sock; &nbsp;<br></span><span style="font-size: 14px;">&nbsp; &nbsp; fastcgi_index index.php;&nbsp;<br></span><span style="font-size: 14px;">&nbsp; &nbsp; fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;&nbsp;<br></span><span style="font-size: 14px;">&nbsp; &nbsp; include fastcgi_params;&nbsp;<br></span><span style="font-size: 14px;">&nbsp; &nbsp; try_files $uri $uri/ /index.php?$query_string;&nbsp;<br></span><span style="font-size: 14px;">&nbsp; }<br></span><span style="font-size: 14px;">}<span class="Apple-tab-span" style="white-space:pre">                     </span></span></pre>
+<p style="margin-left: 25px;"><span class="Apple-tab-span" style="white-space: pre; font-size: 14px;">                      </span></p>
+<p style="margin-left: 25px;"><span style="font-size: 14px;">Then restart the nginx server</span></p>
+<p><span style="font-size: 14px;"><b>Step 11:</b> </span></p>
+<p style="margin-left: 25px;"><span style="font-size: 14px;">After all these setups done. You can login with following credential as admin then you can able setup login with social accounts from admin dashboard.</span></p>
+<p><span style="font-size: 14px;"><br></span></p>
+<p><span style="font-size: 18px;"><b>Admin Credentials:</b></span></p>
+<p><span style="font-size: 14px;"><b>Username: admin</b></span></p>
+<p></p>
+<p><span style="font-size: 14px;"><b>password: admin@123</b></span></p>
+<p><span style="font-size: 14px;"><b><br></b></span></p>
+<p><span style="font-size: 14px;"><b><br></b></span></p>
+<p><span style="font-size: 14px;"><br></span></p>
+
+
+		<hr>
+		
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>
